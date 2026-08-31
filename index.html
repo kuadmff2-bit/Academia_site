@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1014">
+  <meta name="description" content="Academia - estrutura, planos e contato pelo WhatsApp.">
+  <title>Academia | Ontem você disse amanhã!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Voltar ao início">
+      <span class="brand-mark">A</span>
+      <span><strong>ACADEMIA</strong><small>Força. Constância. Resultado.</small></span>
+    </a>
+    <a class="top-cta" href="#planos">Ver planos</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="kicker">COMECE HOJE</span>
+        <h1>Ontem você disse <strong>amanhã!</strong></h1>
+        <p>Estrutura para treinar de verdade, acompanhamento e um ambiente feito para você evoluir todos os dias.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#planos">Conhecer planos</a>
+          <a class="button secondary" href="#estrutura">Ver academia</a>
+        </div>
+        <div class="hero-info">
+          <div><strong>Seg–Sáb</strong><span>Horário editável</span></div>
+          <div><strong>Treino completo</strong><span>Musculação e cardio</span></div>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/motivacao.webp" alt="Pessoa treinando com kettlebell">
+      </figure>
+    </section>
+
+    <section class="section" id="estrutura">
+      <div class="section-heading">
+        <span class="kicker">CONHEÇA O ESPAÇO</span>
+        <h2>Uma academia feita para o seu treino.</h2>
+        <p>As fotos e as legendas abaixo podem ser trocadas diretamente no VS Code.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-card gallery-wide">
+          <img src="assets/estrutura.webp" alt="Visão geral da academia">
+          <figcaption>
+            <strong>Estrutura completa</strong>
+            <span>Equipamentos para diferentes tipos de treino e níveis de experiência.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img src="assets/halteres.webp" alt="Área de pesos livres da academia">
+          <figcaption>
+            <strong>Área de pesos livres</strong>
+            <span>Espaço preparado para força, hipertrofia e evolução constante.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card gallery-quote">
+          <blockquote>“Você não precisa estar motivado todos os dias. Precisa continuar.”</blockquote>
+          <span>Constância supera desculpas.</span>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section plans-section" id="planos">
+      <div class="section-heading">
+        <span class="kicker">PLANOS</span>
+        <h2>Escolha o plano que combina com você.</h2>
+        <p>Valores de demonstração. Você pode alterar nome, preço e benefícios direto no HTML.</p>
+      </div>
+
+      <div class="plans-list">
+        <article class="plan-card">
+          <div class="plan-main">
+            <span class="plan-label">MENSAL</span>
+            <h3>Plano Start</h3>
+            <p>Para começar agora, sem compromisso de longo prazo.</p>
+          </div>
+          <ul>
+            <li>Acesso à musculação</li>
+            <li>Área de cardio</li>
+            <li>Avaliação inicial</li>
+          </ul>
+          <div class="plan-price"><small>por mês</small><strong>R$ 89,90</strong></div>
+          <button class="plan-button" type="button" data-plan="Plano Start" data-price="R$ 89,90">Quero esse plano</button>
+        </article>
+
+        <article class="plan-card featured">
+          <div class="plan-main">
+            <span class="plan-label">MAIS ESCOLHIDO</span>
+            <h3>Plano Performance</h3>
+            <p>Para quem quer treinar com constância e economizar.</p>
+          </div>
+          <ul>
+            <li>Acesso à musculação</li>
+            <li>Área de cardio</li>
+            <li>Avaliação inicial</li>
+            <li>Acompanhamento periódico</li>
+          </ul>
+          <div class="plan-price"><small>por mês</small><strong>R$ 79,90</strong></div>
+          <button class="plan-button" type="button" data-plan="Plano Performance" data-price="R$ 79,90">Quero esse plano</button>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-main">
+            <span class="plan-label">ANUAL</span>
+            <h3>Plano Total</h3>
+            <p>Para transformar treino em rotina e manter o foco o ano inteiro.</p>
+          </div>
+          <ul>
+            <li>Acesso à musculação</li>
+            <li>Área de cardio</li>
+            <li>Avaliação inicial</li>
+            <li>Acompanhamento periódico</li>
+          </ul>
+          <div class="plan-price"><small>por mês</small><strong>R$ 69,90</strong></div>
+          <button class="plan-button" type="button" data-plan="Plano Total" data-price="R$ 69,90">Quero esse plano</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="motivation-strip">
+      <span>NÃO ADIE MAIS.</span>
+      <strong>Ontem você disse amanhã.</strong>
+      <a href="#planos">Começar agora →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>ACADEMIA</strong><span>Seu treino começa com uma decisão.</span></div>
+    <small>© 2026 Academia. Todos os direitos reservados.</small>
+  </footer>
+
+  <div class="modal-backdrop" id="interestBackdrop" hidden></div>
+  <section class="interest-modal" id="interestModal" aria-hidden="true" aria-labelledby="interestTitle">
+    <div class="modal-head">
+      <div><span class="kicker">QUERO TREINAR</span><h2 id="interestTitle">Tenho interesse</h2></div>
+      <button class="close-button" id="closeInterest" type="button" aria-label="Fechar">×</button>
+    </div>
+
+    <div class="selected-plan">
+      <span>Plano escolhido</span>
+      <strong id="selectedPlanName">Plano</strong>
+      <small id="selectedPlanPrice"></small>
+    </div>
+
+    <form id="interestForm">
+      <label>Seu nome<input id="leadName" type="text" autocomplete="name" placeholder="Ex.: Carlos" required></label>
+      <label>Seu WhatsApp<input id="leadPhone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ex.: (92) 99999-9999" required></label>
+      <label>Seu principal objetivo
+        <select id="leadGoal" required>
+          <option value="">Selecione</option>
+          <option>Ganhar massa muscular</option>
+          <option>Emagrecer</option>
+          <option>Melhorar o condicionamento</option>
+          <option>Ganhar força</option>
+          <option>Saúde e qualidade de vida</option>
+          <option>Outro objetivo</option>
+        </select>
+      </label>
+      <label>Mensagem opcional<textarea id="leadMessage" rows="3" placeholder="Ex.: gostaria de saber os horários..."></textarea></label>
+      <button class="send-button" type="submit">Enviar pelo WhatsApp</button>
+      <p class="form-note">Ao continuar, o WhatsApp abrirá com a mensagem pronta para enviar.</p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
