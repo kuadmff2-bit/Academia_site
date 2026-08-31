@@ -1,6 +1,5 @@
-// TROQUE AQUI pelo número real da academia, somente números com DDI + DDD + número.
-// Exemplo Amazonas: 5592999999999
-const WHATSAPP_NUMBER = "5592999999999";
+// Número usado em todo o site: DDI 55 + DDD 92 + número, somente dígitos.
+const WHATSAPP_NUMBER = "5592992973832";
 
 const backdrop = document.querySelector("#interestBackdrop");
 const modal = document.querySelector("#interestModal");
@@ -8,9 +7,18 @@ const closeButton = document.querySelector("#closeInterest");
 const form = document.querySelector("#interestForm");
 const selectedPlanName = document.querySelector("#selectedPlanName");
 const selectedPlanPrice = document.querySelector("#selectedPlanPrice");
+const whatsappDoubts = document.querySelector("#whatsappDoubts");
 
 let currentPlan = "";
 let currentPrice = "";
+
+function whatsappUrl(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+if (whatsappDoubts) {
+  whatsappDoubts.href = whatsappUrl("Olá! Tenho uma dúvida sobre a academia.");
+}
 
 function openInterest(plan, price) {
   currentPlan = plan;
@@ -53,11 +61,6 @@ form.addEventListener("submit", (event) => {
 
   if (!name || !phone || !goal) return;
 
-  if (WHATSAPP_NUMBER === "5592999999999" || !/^55\d{10,11}$/.test(WHATSAPP_NUMBER)) {
-    alert("Antes de usar o formulário, troque WHATSAPP_NUMBER no arquivo script.js pelo número real da academia.");
-    return;
-  }
-
   const message = [
     "Olá! Tenho interesse em me matricular na academia.",
     "",
@@ -68,6 +71,5 @@ form.addEventListener("submit", (event) => {
     extra ? `*Mensagem:* ${extra}` : ""
   ].filter(Boolean).join("\n");
 
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank", "noopener,noreferrer");
+  window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
 });
