@@ -39,6 +39,9 @@ function closeInterest() {
   document.body.classList.remove("modal-open");
 }
 
+// Garante que o formulário nunca abra sozinho ao entrar no site.
+closeInterest();
+
 document.querySelectorAll(".plan-button").forEach((button) => {
   button.addEventListener("click", () => {
     openInterest(button.dataset.plan || "Plano", button.dataset.price || "");
@@ -56,10 +59,9 @@ form.addEventListener("submit", (event) => {
 
   const name = document.querySelector("#leadName").value.trim();
   const phone = document.querySelector("#leadPhone").value.trim();
-  const goal = document.querySelector("#leadGoal").value.trim();
   const extra = document.querySelector("#leadMessage").value.trim();
 
-  if (!name || !phone || !goal) return;
+  if (!name || !phone) return;
 
   const message = [
     "Olá! Tenho interesse em me matricular na academia.",
@@ -67,7 +69,6 @@ form.addEventListener("submit", (event) => {
     `*Plano:* ${currentPlan}${currentPrice ? ` - ${currentPrice}` : ""}`,
     `*Nome:* ${name}`,
     `*Meu WhatsApp:* ${phone}`,
-    `*Objetivo:* ${goal}`,
     extra ? `*Mensagem:* ${extra}` : ""
   ].filter(Boolean).join("\n");
 
